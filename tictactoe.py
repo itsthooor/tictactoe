@@ -1,19 +1,21 @@
+#Credits: https://github.com/itsthooor/tictactoe
+
 import  os
 import time
 
 class plays:
-        fields = ['1','2','3','4','5','6','7','8','9']
-        p1 = 'x'
-        p2 = 'o'
-        move = 1
-        selfield = 0
-        rounds = 1
+    fields = ['1','2','3','4','5','6','7','8','9']
+    p1 = 'x'
+    p2 = 'o'
+    move = 1
+    selfield = 0
+    rounds = 1
 
-        def chgmove(self, ply):
-            self.move = ply
+    def chgmove(self, ply):
+        self.move = ply
 
-        def chground(self):
-            self.rounds += 1
+    def chground(self):
+        self.rounds += 1
 
 inst = plays()
 playstate = True
@@ -32,9 +34,9 @@ while playstate:
 
     def gameui():
         os.system('cls' if os.name == 'nt' else 'clear')
-        print(inst.fields[0] + ' | ' + inst.fields[1] + ' | ' + inst.fields[2])
-        print(inst.fields[3] + ' | ' + inst.fields[4] + ' | ' + inst.fields[5])
-        print(inst.fields[6] + ' | ' + inst.fields[7] + ' | ' + inst.fields[8])
+        print(inst.fields[0] + ' | ' + inst.fields[1] + ' | ' + inst.fields[2] + '\n' +
+            inst.fields[3] + ' | ' + inst.fields[4] + ' | ' + inst.fields[5] + '\n' +
+            inst.fields[6] + ' | ' + inst.fields[7] + ' | ' + inst.fields[8])
 
     def move():
         gameui()
